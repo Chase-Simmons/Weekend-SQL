@@ -49,7 +49,19 @@ function sendDataToDB() {
 ///
 //
 function deleteDataFromDB() {
-  console.log('delete me');
+  const index = $(this).data('index');
+  console.log(index);
+  $.ajax({
+    method: 'DELETE',
+    url: `/task/${index}`,
+  })
+    .then((deleteMessage) => {
+      getDataFromDB();
+    })
+    .catch((err) => {
+      console.log(err);
+      alert('Could not delete data');
+    });
 }
 ///
 //
@@ -69,7 +81,7 @@ function renderTable(response) {
     <tr class="true">
               <td>${task.task_name}</td>
               <td>${task.is_complete}</td>
-              <td><button class="completeButton data-index="${task.id}>COMPLETE</button> <button class="deleteButton data-index="${task.id}>DELETE</button></td>
+              <td><button class="completeButton" data-index="${task.id}">COMPLETE</button> <button class="deleteButton" data-index="${task.id}">DELETE</button></td>
             </tr>
     `);
     } else {
@@ -77,7 +89,7 @@ function renderTable(response) {
       <tr class="false">
                 <td>${task.task_name}</td>
                 <td>${task.is_complete}</td>
-                <td><button class="completeButton data-index="${task.id}>COMPLETE</button> <button class="deleteButton data-index="${task.id}>DELETE</button></td>
+                <td><button class="completeButton" data-index="${task.id}">COMPLETE</button> <button class="deleteButton" data-index="${task.id}">DELETE</button></td>
               </tr>
       `);
     }
