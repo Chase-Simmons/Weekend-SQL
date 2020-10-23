@@ -63,5 +63,23 @@ router.delete('/:id', (req, res) => {
       res.sendStatus(500);
     });
 });
+///
+// UPDATES INFO IN DB
+router.put('/:id', (req, res) => {
+  const newTaskInfo = req.body;
+  const queryText = `UPDATE "TASK" SET is_complete=$1 WHERE id=$2;`;
+  const queryArray = [newTaskInfo.is_complete, req.params.id];
+
+  pool
+    .query(queryText, queryArray)
+    .then((dbResponse) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.warning(err);
+      res.sendStatus(500);
+    });
+});
+///
 
 module.exports = router;
