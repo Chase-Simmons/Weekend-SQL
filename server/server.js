@@ -1,8 +1,8 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
-const PORT = 5000;
-const taskRouter = require('./routes/task.router.js');
+const PORT = process.env.PORT || 5000;
+const bodyParser = require('body-parser');
+const taskRouter = require('./routes/task.router');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
