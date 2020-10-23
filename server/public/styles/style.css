@@ -2,3 +2,40 @@ html,
 body {
   margin: 0;
 }
+
+header {
+  background-color: rgb(92, 167, 213);
+  border-bottom: 4px dashed #333333;
+  padding: 5px;
+  padding-left: 25px;
+}
+.table-container {
+  margin-top: 100px;
+  outline: auto #333333;
+  outline-width: 10px;
+  outline-style: double;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabler {
+  border-collapse: collapse;
+}
+
+.tabler tr {
+  border: 2px solid #003045;
+}
+
+.tabler td {
+  text-align: center;
+  width: 250px;
+  border: 2px solid #003045;
+}
+
+.tabler thead tr:first-child {
+  background-color: rgb(114, 234, 238);
+  height: 50px;
+  font-size: 24px;
+  font-style: italic;
+}
