@@ -25,7 +25,26 @@ function getDataFromDB() {
 ///
 //
 function sendDataToDB() {
-  console.log('send me');
+  const taskInput = $('.task-name-input').val();
+
+  const objectToSend = {
+    task_name: taskInput,
+    is_complete: false,
+  };
+
+  $.ajax({
+    method: 'POST',
+    url: '/task',
+    data: objectToSend,
+  })
+    .then(function (response) {
+      getDataFromDB();
+      clearInputs();
+    })
+    .catch(function (err) {
+      console.log(err);
+      alert('Could not send data to server');
+    });
 }
 ///
 //
@@ -66,5 +85,7 @@ function renderTable(response) {
 }
 ///
 //
-function clearInputs() {}
+function clearInputs() {
+  $('.task-name-input').val('');
+}
 ///

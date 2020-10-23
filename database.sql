@@ -4,3 +4,6 @@ CREATE TABLE "task" (
 	"is_complete" BOOLEAN
 	);
 	
+INSERT INTO "task" ("task_name", "is_complete")
+VALUES ('Dishes', false),
+('Trash', false)
