@@ -55,7 +55,7 @@ function deleteDataFromDB() {
     method: 'DELETE',
     url: `/task/${index}`,
   })
-    .then((deleteMessage) => {
+    .then((response) => {
       getDataFromDB();
     })
     .catch((err) => {
@@ -66,7 +66,21 @@ function deleteDataFromDB() {
 ///
 //
 function updateDataFromDB() {
-  console.log('complete me');
+  const index = $(this).data('index');
+  const obj = { is_complete: true };
+  console.log(obj);
+  $.ajax({
+    method: 'PUT',
+    url: `/task/${index}`,
+    data: obj,
+  })
+    .then((response) => {
+      getDataFromDB();
+    })
+    .catch((err) => {
+      console.log(err);
+      alert('Could not update data');
+    });
 }
 ///
 //

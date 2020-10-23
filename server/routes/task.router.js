@@ -69,7 +69,7 @@ router.delete('/:id', (req, res) => {
 //fix
 router.put('/:id', (req, res) => {
   const newTaskInfo = req.body;
-  const queryText = `UPDATE "TASK" SET is_complete=$1 WHERE id=$2;`;
+  const queryText = `UPDATE "task" SET is_complete=$1 WHERE id=$2;`;
   const queryArray = [newTaskInfo.is_complete, req.params.id];
 
   pool
