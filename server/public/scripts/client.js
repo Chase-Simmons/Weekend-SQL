@@ -3,6 +3,9 @@ $(document).ready(initialize);
 //  ON READY AND LISTENERS
 function initialize() {
   console.log('init');
+  $('.task-list').on('click', '.completeButton', updateDataFromDB);
+  $('.task-list').on('click', '.deleteButton', deleteDataFromDB);
+  $('.create-task-button').on('click', sendDataToDB);
   getDataFromDB();
 }
 ///
@@ -21,13 +24,19 @@ function getDataFromDB() {
 }
 ///
 //
-function sendDataToDB() {}
+function sendDataToDB() {
+  console.log('send me');
+}
 ///
 //
-function deleteDataFromDB() {}
+function deleteDataFromDB() {
+  console.log('delete me');
+}
 ///
 //
-function updateDataFromDB() {}
+function updateDataFromDB() {
+  console.log('complete me');
+}
 ///
 //
 function renderTable(response) {
