@@ -1,6 +1,7 @@
 html,
 body {
   margin: 0;
+  background-color: rgb(202, 210, 218);
 }
 
 header {
@@ -10,7 +11,7 @@ header {
   padding-left: 25px;
 }
 .table-container {
-  margin-top: 100px;
+  margin-top: 5px;
   outline: auto #333333;
   outline-width: 10px;
   outline-style: double;
@@ -24,13 +25,14 @@ header {
 }
 
 .tabler tr {
-  border: 2px solid #003045;
+  border: 2px solid #000000;
 }
 
 .tabler td {
   text-align: center;
   width: 250px;
-  border: 2px solid #003045;
+  font-weight: bold;
+  border: 2px solid #000000;
 }
 
 .tabler thead tr:first-child {
@@ -38,4 +40,48 @@ header {
   height: 50px;
   font-size: 24px;
   font-style: italic;
+}
+
+.false {
+  background-color: rgb(155, 0, 0);
+}
+
+.true {
+  background-color: rgb(0, 184, 0);
+}
+
+button {
+  outline: auto;
+}
+.input-box {
+  margin-top: 100px;
+  width: 500px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input-box td {
+  text-align: center;
+  width: 250px;
+  font-weight: bold;
+  border: 2px solid #000000;
+}
+.input-box-sizer {
+  text-align: center;
+  border-collapse: collapse;
+  background-color: aliceblue;
+}
+
+.task-name-input {
+  width: 100%;
+  border: none;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+  background-color: inherit;
+}
+.create-task-button {
+  width: 100%;
+  padding: 0;
+  font-size: 20px;
 }
