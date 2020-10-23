@@ -14,7 +14,7 @@ const pool = new Pool({
   idleTimeoutMillis: 10000, // 10 seconds
 });
 ///
-//
+// GET INFO FROM DB
 router.get('/', (req, res) => {
   console.log('getter');
   let search = `SELECT * FROM "task" ORDER BY "id"`;
@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
     });
 });
 ///
-//
+// SEND INFO TO DB
 router.post('/', function (req, res) {
   const taskToAdd = req.body;
   const query =
@@ -47,5 +47,21 @@ router.post('/', function (req, res) {
     });
 });
 ///
+// DELETE INFO FROM DB
+router.delete('/:id', (req, res) => {
+  const taskId = req.params.id;
+  const queryText = `DELETE FROM "task" WHERE id=$1;`;
+  const queryArrayData = [taskId];
+
+  pool
+    .query(queryText, queryArrayData)
+    .then((dbResponse) => {
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(500);
+    });
+});
 
 module.exports = router;
