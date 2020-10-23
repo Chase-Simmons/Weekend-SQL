@@ -1,0 +1,24 @@
+{
+  "name": "weekend-sql-to-do-list-master",
+  "version": "1.0.0",
+  "description": "[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chase-Simmons/Weekend-SQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chase-Simmons/Weekend-SQL/issues"
+  },
+  "homepage": "https://github.com/Chase-Simmons/Weekend-SQL#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^15.0.1",
+    "pg": "^8.4.1"
+  }
+}
