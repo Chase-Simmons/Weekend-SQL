@@ -65,6 +65,8 @@ router.delete('/:id', (req, res) => {
 });
 ///
 // UPDATES INFO IN DB
+
+//fix
 router.put('/:id', (req, res) => {
   const newTaskInfo = req.body;
   const queryText = `UPDATE "TASK" SET is_complete=$1 WHERE id=$2;`;
