@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 .image {
-  background-image: url('image.jpeg');
+  background-image: url('image.jpeg'); /* Image is one of my own i do photography :'D*/
   filter: blur(8px);
   -webkit-filter: blur(8px);
   height: 100%;
