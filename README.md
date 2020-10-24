@@ -15,40 +15,27 @@ This is a project is a task tracker, a task can be added via the input field, st
 
 ![Screen-Shot](screenshot.png)
 
-### Prerequisites
-
-Link to software that is required to install the app (e.g. node).
-
-- [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
-
 ## Installation
 
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
-
-If your application has secret keys (for example -- Twilio), make sure you tell them how to set that up, both in getting the key and then what to call it in the `.env` file.
-
-1. Create a database named `your database name`,
-2. The queries in the `tables.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
-3. Open up your editor of choice and run an `npm install`
-4. Run `npm run server` in your terminal
-5. Run `npm run client` in your terminal
-6. The `npm run client` command will open up a new browser tab for you!
+1. Create a database named `weekend-to-do-app`,
+2. The queries in the `database.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
+3. Open up your editor of choice and run an `npm install || npm i`
+4. Run `node server/server.js` in your terminal
+5. Open Google Chrome and connect to `localhost:5000`
 
 ## Usage
 
 How does someone use this application? Tell a user story here.
 
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-5. xxx
-6. xxx
+1. Insert a task name into the input field, and create
+2. Go off and complete your task, and then mark it on the tracker by clicking the COMPLETE button
+3. If the task is no longer needed to be tracked you can delete it by clicking the DELETE button
 
 ## Built With
 
-List technologies and frameworks here
+"express": "^4.17.1",
+"node": "^15.0.1",
+"pg": "^8.4.1"
 
 ## License
 
