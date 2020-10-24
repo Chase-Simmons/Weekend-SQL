@@ -65,6 +65,24 @@ header {
   font-style: italic;
 }
 
+.tabler tfoot {
+  background-color: rgb(28, 31, 31);
+  color: rgb(255, 247, 0);
+  padding: 50px;
+  font-size: 24px;
+  letter-spacing: 20px;
+  text-align: right;
+}
+.tabler tfoot td {
+  color: rgb(255, 247, 0);
+  font-size: 24px;
+  letter-spacing: 20px;
+  text-align: right;
+}
+
+.tabler tbody td:nth-child(3) {
+  background-color: rgb(28, 31, 31);
+}
 .false {
   background-color: rgb(155, 0, 0);
 }
@@ -75,6 +93,7 @@ header {
 
 button {
   outline: auto;
+  padding: 5px;
 }
 .input-box {
   padding-top: 10px;
