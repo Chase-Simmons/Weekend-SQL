@@ -6,4 +6,7 @@ CREATE TABLE "task" (
 	
 INSERT INTO "task" ("task_name", "is_complete")
 VALUES ('Dishes', false),
-('Trash', false)
+('Trash', false),
+('Complete assignment', true),
+('Prank Myron', false),
+('Write music', true)
